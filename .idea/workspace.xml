@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f39bd30c-ec2a-4a80-8055-085bff1eb31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -27,14 +27,18 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2uIxKLXSESIKzIDU7OuKtOHdBar" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.LlogableGestorTest.testCalcularIngressosTotals.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Jordi",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/propietari/Documents/GitHub/24-25-pr-ctica-ii-javacar-gerard_jordi_damb",
     "node.js.detected.package.eslint": "true",
@@ -45,6 +49,29 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="LlogableGestorTest.testCalcularIngressosTotals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.JavaCar" />
+      <option name="MAIN_CLASS_NAME" value="org.JavaCar.LlogableGestorTest" />
+      <option name="METHOD_NAME" value="testCalcularIngressosTotals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LlogableGestorTest.testCalcularIngressosTotals" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,5 +95,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

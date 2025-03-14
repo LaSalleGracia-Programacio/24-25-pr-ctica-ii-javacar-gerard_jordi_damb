@@ -11,4 +11,7 @@ public class Roda {
     public String getMarca() {
         return marca;
     }
+    public double getDiametre() {
+        return diametre;
+    }
 }
