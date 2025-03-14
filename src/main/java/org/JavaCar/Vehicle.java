@@ -2,7 +2,7 @@ package org.JavaCar;
 
 import java.util.ArrayList;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Llogable{
     private String matricula;
     private String marca;
     private String model;
@@ -47,4 +47,5 @@ public abstract class Vehicle {
     public EtiquetaAmbiental getEtiquetaAmbiental() {
         return etiquetaAmbiental;
     }
+    
 }
