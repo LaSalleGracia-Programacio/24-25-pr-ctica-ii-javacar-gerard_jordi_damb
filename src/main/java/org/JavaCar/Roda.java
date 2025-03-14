@@ -4,9 +4,9 @@ public class Roda {
     private String marca;
     private double diametre;
 
-    public Roda(String marca, int diametro) {
+    public Roda(String marca, int diametre) {
         this.marca = marca;
-        this.diametre = diametro;
+        this.diametre = diametre;
     }
     public String getMarca() {
         return marca;
