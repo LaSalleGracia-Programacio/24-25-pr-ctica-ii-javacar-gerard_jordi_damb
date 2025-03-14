@@ -47,5 +47,9 @@ public abstract class Vehicle implements Llogable{
     public EtiquetaAmbiental getEtiquetaAmbiental() {
         return etiquetaAmbiental;
     }
-    
+
+    @Override
+    public double calcularPreu(int dies) {
+        return preuBase * dies;
+    }
 }
