@@ -7,4 +7,7 @@ public class Cotxe extends Vehicle {
         super(matricula, marca, model, preuBase, motor, rodes);
         this.nombrePlaces = nombrePlaces;
     }
+    public int getNombrePlaces() {
+        return nombrePlaces;
+    }
 }
