@@ -1,10 +1,10 @@
 package org.JavaCar;
 
-public class Rueda {
+public class Roda {
     private String marca;
     private double diametro;
 
-    public Rueda(String marca, double diametro) {
+    public Roda(String marca, int diametro) {
         this.marca = marca;
         this.diametro = diametro;
     }
