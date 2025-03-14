@@ -1,15 +1,13 @@
 package org.JavaCar;
 
-import java.util.ArrayList;
-
 public abstract class Vehicle implements Llogable{
-    private String matricula;
-    private String marca;
-    private String model;
-    private double preuBase;
-    private Motor motor;
-    private Roda[] rodes;
-    private EtiquetaAmbiental etiquetaAmbiental;
+    protected String matricula;
+    protected String marca;
+    protected String model;
+    protected double preuBase;
+    protected Motor motor;
+    protected Roda[] rodes;
+    protected EtiquetaAmbiental etiquetaAmbiental;
 
     public Vehicle(String matricula, String marca, String model, double preuBase, Motor motor, Roda[] rodes) {
         this.matricula = matricula;

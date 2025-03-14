@@ -1,6 +1,5 @@
 package org.JavaCar;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GestorLloguers {

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f39bd30c-ec2a-4a80-8055-085bff1eb31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +37,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.LlogableGestorTest.testCalcularIngressosTotals.executor": "Run",
+    "JUnit.LlogableGestorTest.testCalcularIngressosTotals.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Jordi",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/propietari/Documents/GitHub/24-25-pr-ctica-ii-javacar-gerard_jordi_damb",
     "node.js.detected.package.eslint": "true",
