@@ -8,10 +8,10 @@ public abstract class Vehicle implements Llogable{
     private String model;
     private double preuBase;
     private Motor motor;
-    private ArrayList<Roda> rodes;
+    private Roda[] rodes;
     private EtiquetaAmbiental etiquetaAmbiental;
 
-    public Vehicle(String matricula, String marca, String model, double preuBase, Motor motor, ArrayList<Roda> rodes) {
+    public Vehicle(String matricula, String marca, String model, double preuBase, Motor motor, Roda[] rodes) {
         this.matricula = matricula;
         this.marca = marca;
         this.model = model;
@@ -40,7 +40,7 @@ public abstract class Vehicle implements Llogable{
         return motor;
     }
 
-    public ArrayList<Roda> getRodes() {
+    public Roda[] getRodes() {
         return rodes;
     }
 
@@ -52,4 +52,18 @@ public abstract class Vehicle implements Llogable{
     public double calcularPreu(int dies) {
         return preuBase * dies;
     }
+
+    /*
+    * ETIQUETA AMBIENTAL
+    *
+    * B:
+    * - MOTO      : <50cc
+    * - COCHE     : +8 plazas
+    * - FURGONETA :
+    *
+    * C:
+    * - MOTO      :
+    * - COCHE     :
+    * - FURGONETA :
+    * */
 }
