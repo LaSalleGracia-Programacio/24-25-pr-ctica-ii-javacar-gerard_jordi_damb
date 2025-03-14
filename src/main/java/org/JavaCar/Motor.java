@@ -1,17 +1,17 @@
 package org.JavaCar;
 
 public class Motor {
-    private String tipo;
+    private String tipus;
     private int potencia;
 
     public Motor(String tipo, int potencia) {
-        this.tipo = tipo;
+        this.tipus = tipo;
         this.potencia = potencia;
     }
-    public String getTipo() {
-        return tipo;
+    public String getTipus() {
+        return tipus;
     }
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipus(String tipus) {
+        this.tipus = tipus;
     }
 }
