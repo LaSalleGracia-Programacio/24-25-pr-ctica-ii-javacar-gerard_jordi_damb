@@ -38,7 +38,7 @@ public class Cotxe extends Vehicle {
             return EtiquetaAmbiental.Eco;
         }
         else if (this.tipo == Tipo.BEV || this.tipo == Tipo.REEV
-                || (this.tipo == Tipo.PHEV && autonomia < 40) || this.tipo == Tipo.Pila) {
+                || (this.tipo == Tipo.PHEV && autonomia > 40) || this.tipo == Tipo.Pila) {
             return EtiquetaAmbiental.ZeroEmissions;
         }
         else if ((this.combustible == Combustible.Gasolina && this.euro == 3) ||
