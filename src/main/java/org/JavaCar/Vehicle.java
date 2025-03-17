@@ -50,18 +50,4 @@ public abstract class Vehicle implements Llogable{
     public double calcularPreu(int dies) {
         return preuBase * dies;
     }
-
-    /*
-    * ETIQUETA AMBIENTAL
-    *
-    * B:
-    * - MOTO      : <50cc
-    * - COCHE     : +8 plazas
-    * - FURGONETA :
-    *
-    * C:
-    * - MOTO      :
-    * - COCHE     :
-    * - FURGONETA :
-    * */
 }
