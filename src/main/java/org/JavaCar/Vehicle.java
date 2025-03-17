@@ -93,17 +93,4 @@ public abstract class Vehicle implements Llogable{
         return preuBase * dies;
     }
 
-    /*
-    * ETIQUETA AMBIENTAL
-    *
-    * B:
-    * - MOTO      : <50cc
-    * - COCHE     : +8 plazas
-    * - FURGONETA :
-    *
-    * C:
-    * - MOTO      :
-    * - COCHE     :
-    * - FURGONETA :
-    * */
 }
