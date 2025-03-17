@@ -1,6 +1,6 @@
 package org.JavaCar;
 
-public abstract class Vehicle implements Llogable{
+public abstract class Vehicle implements Llogable {
     protected String matricula;
     protected String marca;
     protected String model;
@@ -92,3 +92,4 @@ public abstract class Vehicle implements Llogable{
     public double calcularPreu(int dies) {
         return preuBase * dies;
     }
+}
