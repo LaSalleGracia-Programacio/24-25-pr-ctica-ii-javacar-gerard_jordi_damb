@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f39bd30c-ec2a-4a80-8055-085bff1eb31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,23 +34,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.LlogableGestorTest.testCalcularIngressosTotals.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/propietari/Documents/GitHub/24-25-pr-ctica-ii-javacar-gerard_jordi_damb",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.FurgonetaTest.testCalculPreuFurgonetaGran.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FurgonetaTest.testCreacioFurgoneta.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LlogableGestorTest.testCalcularIngressosTotals.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/propietari/Documents/GitHub/24-25-pr-ctica-ii-javacar-gerard_jordi_damb&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="LlogableGestorTest.testCalcularIngressosTotals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="JUnit.FurgonetaTest">
+    <configuration name="FurgonetaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaCar" />
       <extension name="coverage">
         <pattern>
@@ -60,16 +62,80 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.JavaCar" />
-      <option name="MAIN_CLASS_NAME" value="org.JavaCar.LlogableGestorTest" />
-      <option name="METHOD_NAME" value="testCalcularIngressosTotals" />
+      <option name="MAIN_CLASS_NAME" value="org.JavaCar.FurgonetaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurgonetaTest.testCalculPreuFurgonetaGran" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.JavaCar" />
+      <option name="MAIN_CLASS_NAME" value="org.JavaCar.FurgonetaTest" />
+      <option name="METHOD_NAME" value="testCalculPreuFurgonetaGran" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MotoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.JavaCar" />
+      <option name="MAIN_CLASS_NAME" value="org.JavaCar.MotoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RodaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.JavaCar" />
+      <option name="MAIN_CLASS_NAME" value="org.JavaCar.RodaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaCar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.JavaCar" />
+      <option name="MAIN_CLASS_NAME" value="org.JavaCar.VehicleTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LlogableGestorTest.testCalcularIngressosTotals" />
+        <item itemvalue="JUnit.FurgonetaTest" />
+        <item itemvalue="JUnit.FurgonetaTest.testCalculPreuFurgonetaGran" />
+        <item itemvalue="JUnit.VehicleTest" />
+        <item itemvalue="JUnit.RodaTest" />
+        <item itemvalue="JUnit.MotoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -91,6 +157,7 @@
       <updated>1741949827357</updated>
       <workItem from="1741949831058" duration="394000" />
       <workItem from="1741950229994" duration="1030000" />
+      <workItem from="1742059258279" duration="452000" />
     </task>
     <servers />
   </component>
