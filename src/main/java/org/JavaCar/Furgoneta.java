@@ -30,6 +30,28 @@ public class Furgoneta extends Vehicle {
         return capacitatCarga;
     }
 
+    public EtiquetaAmbiental calcularEtiqueta() {
+        if (((this.tipo == Tipo.PHEV && autonomia < 40) || this.tipo == Tipo.HEV
+                || this.tipo == Tipo.GNL || this.tipo == Tipo.GNC || this.tipo == Tipo.GLP)
+                && this.euro == 6) {
+            return EtiquetaAmbiental.Eco;
+        }
+        else if (this.tipo == Tipo.BEV || this.tipo == Tipo.REEV
+                || (this.tipo == Tipo.PHEV && autonomia > 40) || this.tipo == Tipo.Pila) {
+            return EtiquetaAmbiental.ZeroEmissions;
+        }
+        else if (this.euro == 4 || this.euro == 5) {
+            return EtiquetaAmbiental.B;
+        }
+        else if (this.euro == 6) {
+            return EtiquetaAmbiental.C;
+        }
+        else {
+            return EtiquetaAmbiental.SenseEtiqueta;
+        }
+    }
+
+
     @Override
     public double calcularPreu(int dies) {
         if (this.getCapacitatCarga() > 1000) {
