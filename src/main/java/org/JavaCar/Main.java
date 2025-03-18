@@ -1,9 +1,8 @@
 package org.JavaCar;
 
-import org.JavaCar.users.Admin;
-import org.JavaCar.users.Client;
-import org.JavaCar.users.Usuari;
-import org.JavaCar.vehicles.Vehicle;
+import org.JavaCar.users.*;
+
+import org.JavaCar.vehicles.*;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -11,19 +10,44 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         ArrayList<Usuari> usuaris = new ArrayList<>();
         ArrayList<Vehicle> vehiclesDisponibles = new ArrayList<>();
+        vehiclesDisponibles.add(new Moto("5678DEF", "Yamaha", "R3", 25.00, 300, null, null));
+        vehiclesDisponibles.add(new Moto("9101GHI", "Honda", "CBR600RR", 45.00, 600, null, null));
+        vehiclesDisponibles.add(new Moto("1121JKL", "Zero", "SR/F", 60.00, 250, null, null));
+        vehiclesDisponibles.add(new Moto("3141MNO", "Ducati", "Panigale V4", 120.00, 1000, null, null));
+        vehiclesDisponibles.add(new Moto("4151PQR", "Kawasaki", "Ninja H2", 150.00, 500, null, null));
+
         usuaris.add(new Admin("admin", "admin"));
         usuaris.add(new Client("a", "a"));
 
         Usuari usuariActual = iniciarSesio(usuaris);
 
         if (usuariActual.isAdmin() == true) {
-            System.out.println("HOLA ADMIN");
+            System.out.println("\n\nHOLA ADMIN");
         }else {
-            System.out.println("HOLA " + usuariActual.getUsername());
+            System.out.println("\n\nHOLA " + usuariActual.getUsername());
+            System.out.println("Que vols fer?\n" +
+                    "[1]Veure llistat de vehicles\n" +
+                    "[2]Tramitar un lloguer\n" +
+                    "[3]Calcul del lloguer");
+            int opcio = sc.nextInt();
+            switch (opcio) {
+                case 1:
+                    printarVehicles(vehiclesDisponibles);
+            }
         }
 
+    }
+
+    public static void printarVehicles(ArrayList<Vehicle> vehiclesDisponibles) {
+        System.out.printf("%-15s %-15s %s%n", "MARCA", "MODEL", "PREU/DIA");
+        for (Vehicle vehicle : vehiclesDisponibles) {
+            System.out.printf("%-15s %-15s %.2f €%n",
+                    vehicle.getMarca(), vehicle.getModel(), vehicle.getPreuBase());
+        }
     }
 
     public static Usuari iniciarSesio(ArrayList<Usuari> usuaris) {
@@ -33,8 +57,8 @@ public class Main {
 
         while (!iniciat) {
             System.out.println("BENVINGUT A JAVACAR\n" +
-                    "Iniciar sesió[1]\n" +
-                    "Registrar-se[2]");
+                    "[1]Iniciar sesió\n" +
+                    "[2]Registrar-se");
             int opcio = sc.nextInt();
 
             switch (opcio) {
