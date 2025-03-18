@@ -1,4 +1,4 @@
-package org.JavaCar;
+package org.JavaCar.vehicles;
 
 public class Furgoneta extends Vehicle {
     private double capacitatCarga;
@@ -10,14 +10,14 @@ public class Furgoneta extends Vehicle {
     }
 
     public Furgoneta(String matricula, String marca, String model, double preuBase, int capacitatCarga, Motor motor, Roda[] rodes,
-                 Combustible combustible, int euro) {
+                     Combustible combustible, int euro) {
         super(matricula, marca, model, preuBase, motor, rodes, combustible, euro);
         this.capacitatCarga = capacitatCarga;
         this.etiquetaAmbiental = calcularEtiqueta();
     }
 
     public Furgoneta(String matricula, String marca, String model, double preuBase, int capacitatCarga, Motor motor, Roda[] rodes,
-                 Tipo tipo, int autonomia, Combustible combustible, int euro) {
+                     Tipo tipo, int autonomia, Combustible combustible, int euro) {
         super(matricula, marca, model, preuBase, motor, rodes, tipo, autonomia,combustible, euro);
         this.capacitatCarga = capacitatCarga;
         this.etiquetaAmbiental = calcularEtiqueta();

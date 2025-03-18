@@ -1,5 +1,7 @@
 package org.JavaCar;
 
+import org.JavaCar.vehicles.Vehicle;
+
 import java.util.ArrayList;
 import java.util.List;
 

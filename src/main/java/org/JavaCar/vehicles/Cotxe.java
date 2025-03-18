@@ -1,4 +1,4 @@
-package org.JavaCar;
+package org.JavaCar.vehicles;
 
 public class Cotxe extends Vehicle {
     private int nombrePlaces;

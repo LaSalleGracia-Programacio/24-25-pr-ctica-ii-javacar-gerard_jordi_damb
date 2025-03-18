@@ -6,7 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="f39bd30c-ec2a-4a80-8055-085bff1eb31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Combustible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Combustible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Cotxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Cotxe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/EtiquetaAmbiental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/EtiquetaAmbiental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Furgoneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Furgoneta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorLloguers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Moto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Moto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Motor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Motor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Roda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Roda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Tipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Tipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/vehicles/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/JavaCar/FurgonetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/JavaCar/FurgonetaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/JavaCar/LlogableGestorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/JavaCar/LlogableGestorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/JavaCar/MotoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/JavaCar/MotoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/JavaCar/MotorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/JavaCar/MotorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/JavaCar/RodaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/JavaCar/RodaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/JavaCar/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/JavaCar/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +74,7 @@
       <module name="JavaCar" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="PATTERN" value="org.JavaCar.vehicles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -73,7 +89,7 @@
       <module name="JavaCar" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="PATTERN" value="org.JavaCar.vehicles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,7 +105,7 @@
       <module name="JavaCar" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="PATTERN" value="org.JavaCar.vehicles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,7 +120,7 @@
       <module name="JavaCar" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="PATTERN" value="org.JavaCar.vehicles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,7 +135,7 @@
       <module name="JavaCar" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.JavaCar.*" />
+          <option name="PATTERN" value="org.JavaCar.vehicles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,7 +175,7 @@
       <workItem from="1741949831058" duration="394000" />
       <workItem from="1741950229994" duration="1030000" />
       <workItem from="1742059258279" duration="452000" />
-      <workItem from="1742288938052" duration="698000" />
+      <workItem from="1742288938052" duration="1381000" />
     </task>
     <servers />
   </component>

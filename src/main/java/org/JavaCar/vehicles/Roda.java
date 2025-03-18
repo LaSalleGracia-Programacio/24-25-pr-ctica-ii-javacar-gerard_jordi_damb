@@ -1,4 +1,4 @@
-package org.JavaCar;
+package org.JavaCar.vehicles;
 
 public class Roda {
     private String marca;

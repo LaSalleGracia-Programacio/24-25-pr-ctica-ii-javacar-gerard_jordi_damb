@@ -1,5 +1,6 @@
 package org.JavaCar;
 
+import org.JavaCar.vehicles.Moto;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
