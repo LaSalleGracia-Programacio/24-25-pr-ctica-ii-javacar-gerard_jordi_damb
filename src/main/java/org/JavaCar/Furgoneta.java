@@ -6,24 +6,28 @@ public class Furgoneta extends Vehicle {
     public Furgoneta(String matricula, String marca, String model, double preuBase, double capacitatCarga, Motor motor, Roda[] rodes) {
         super(matricula, marca, model, preuBase, motor, rodes);
         this.capacitatCarga = capacitatCarga;
+        this.etiquetaAmbiental = calcularEtiqueta();
     }
 
     public Furgoneta(String matricula, String marca, String model, double preuBase, int capacitatCarga, Motor motor, Roda[] rodes,
                  Combustible combustible, int euro) {
         super(matricula, marca, model, preuBase, motor, rodes, combustible, euro);
         this.capacitatCarga = capacitatCarga;
+        this.etiquetaAmbiental = calcularEtiqueta();
     }
 
     public Furgoneta(String matricula, String marca, String model, double preuBase, int capacitatCarga, Motor motor, Roda[] rodes,
                  Tipo tipo, int autonomia, Combustible combustible, int euro) {
         super(matricula, marca, model, preuBase, motor, rodes, tipo, autonomia,combustible, euro);
         this.capacitatCarga = capacitatCarga;
+        this.etiquetaAmbiental = calcularEtiqueta();
     }
 
     public Furgoneta(String matricula, String marca, String model, double preuBase, int capacitatCarga, Motor motor, Roda[] rodes,
                  Tipo tipo, int autonomia) {
         super(matricula, marca, model, preuBase, motor, rodes, tipo, autonomia);
         this.capacitatCarga = capacitatCarga;
+        this.etiquetaAmbiental = calcularEtiqueta();
     }
 
     public double getCapacitatCarga() {
