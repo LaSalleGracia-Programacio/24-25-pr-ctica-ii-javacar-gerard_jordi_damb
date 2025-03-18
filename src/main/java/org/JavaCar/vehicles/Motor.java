@@ -1,4 +1,4 @@
-package org.JavaCar;
+package org.JavaCar.vehicles;
 
 public class Motor {
     private String tipus;

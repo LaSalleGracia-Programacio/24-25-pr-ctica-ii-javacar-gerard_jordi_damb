@@ -1,4 +1,6 @@
-package org.JavaCar;
+package org.JavaCar.vehicles;
+
+import org.JavaCar.*;
 
 public abstract class Vehicle implements Llogable {
     protected String matricula;

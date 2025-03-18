@@ -1,5 +1,8 @@
 package org.JavaCar;
 
+import org.JavaCar.vehicles.Vehicle;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class GestorLloguers {
@@ -10,8 +13,13 @@ public class GestorLloguers {
         }
         return total;
     }
-    public static List<Vehicle> filtrarPerPreu(List<Vehicle> v, double preuMax) {
-        List<Vehicle> r = v;
-        return r;
+    public static List<Vehicle> filtrarPerPreu(List<Vehicle> llista, double preuMax) {
+        List<Vehicle> filtrats = new ArrayList<Vehicle>();
+        for (int i = 0; i < llista.size(); i++) {
+            if (llista.get(i).getPreuBase() <= preuMax) {
+                filtrats.add(llista.get(i));
+            }
+        }
+        return filtrats;
     }
 }
