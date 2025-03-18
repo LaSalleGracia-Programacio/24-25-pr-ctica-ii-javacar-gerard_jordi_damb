@@ -17,7 +17,7 @@ public class GestorUsuarisVehicles {
         inicialitzacioArrays();
     }
 
-    public Usuari iniciarSesio(ArrayList<Usuari> usuaris) {
+    public Usuari iniciarSesio() {
         Scanner sc = new Scanner(System.in);
         boolean iniciat = false;
         Usuari usuariActual = null;

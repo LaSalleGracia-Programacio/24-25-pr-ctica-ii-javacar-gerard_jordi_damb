@@ -8,8 +8,7 @@ public class Main {
         GestorUsuarisVehicles guv = new GestorUsuarisVehicles();
         Scanner sc = new Scanner(System.in);
 
-
-        Usuari usuariActual = guv.iniciarSesio(guv.getUsuaris());
+        Usuari usuariActual = guv.iniciarSesio();
 
         if (usuariActual.isAdmin() == true) {
             System.out.println("\n\nHOLA ADMIN");
