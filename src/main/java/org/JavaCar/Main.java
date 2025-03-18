@@ -23,6 +23,7 @@ public class Main {
             switch (opcio) {
                 case 1:
                     guv.printarVehicles();
+                    break;
             }
         }
     }
