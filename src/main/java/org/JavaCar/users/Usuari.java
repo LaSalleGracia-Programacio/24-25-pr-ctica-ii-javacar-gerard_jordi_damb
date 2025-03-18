@@ -1,18 +1,13 @@
 package org.JavaCar.users;
 
-public class Usuari {
-    private String username;
-    private String password;
-    private boolean admin;
+public abstract class Usuari {
+    protected String username;
+    protected String password;
+    protected boolean admin;
 
     public Usuari(String username, String password) {
         this.username = username;
         this.password = password;
-        if (username.equals("admin")) {
-            this.admin = true;
-        }else {
-            this.admin = false;
-        }
     }
 
     public String getUsername() {

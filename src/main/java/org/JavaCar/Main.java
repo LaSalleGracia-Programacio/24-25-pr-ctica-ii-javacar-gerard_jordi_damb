@@ -1,5 +1,7 @@
 package org.JavaCar;
 
+import org.JavaCar.users.Admin;
+import org.JavaCar.users.Client;
 import org.JavaCar.users.Usuari;
 import org.JavaCar.vehicles.Vehicle;
 
@@ -11,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Usuari> usuaris = new ArrayList<>();
         ArrayList<Vehicle> vehiclesDisponibles = new ArrayList<>();
-        usuaris.add(new Usuari("admin", "admin"));
-        usuaris.add(new Usuari("a", "a"));
+        usuaris.add(new Admin("admin", "admin"));
+        usuaris.add(new Client("a", "a"));
 
         Usuari usuariActual = iniciarSesio(usuaris);
 
@@ -56,7 +58,7 @@ public class Main {
                     String nom2 = sc.next();
                     System.out.print("Contrasenya: ");
                     String contrasenya2 = sc.next();
-                    usuaris.add(new Usuari(nom2, contrasenya2));
+                    usuaris.add(new Client(nom2, contrasenya2));
                     iniciat = true;
                     usuariActual = usuaris.get(usuaris.size() - 1);
             }

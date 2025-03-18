@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f39bd30c-ec2a-4a80-8055-085bff1eb31d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/users/Usuari.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/users/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/users/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/EtiquetaAmbiental.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/Furgoneta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/GestorLloguers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/JavaCar/GestorLloguers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/Moto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/Motor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/users/Usuari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/users/Usuari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/JavaCar/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/JavaCar/users/Usuari.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/JavaCar/users/Usuari.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +164,7 @@
       <workItem from="1741949831058" duration="394000" />
       <workItem from="1741950229994" duration="1030000" />
       <workItem from="1742059258279" duration="452000" />
-      <workItem from="1742288938052" duration="4125000" />
+      <workItem from="1742288938052" duration="4965000" />
     </task>
     <servers />
   </component>
