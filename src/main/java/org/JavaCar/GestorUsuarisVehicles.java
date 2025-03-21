@@ -61,7 +61,8 @@ public class GestorUsuarisVehicles {
         while (!iniciat) {
             System.out.println("BENVINGUT A JAVACAR\n" +
                     "[1]Iniciar sesió\n" +
-                    "[2]Registrar-se");
+                    "[2]Registrar-se\n" +
+                    "[3]Sortir");
             int opcio = sc.nextInt();
 
             switch (opcio) {
@@ -88,6 +89,10 @@ public class GestorUsuarisVehicles {
                     usuaris.add(new Client(nom2, contrasenya2));
                     iniciat = true;
                     usuariActual = usuaris.get(usuaris.size() - 1);
+                    break;
+                case 3:
+                    iniciat = true;
+                    usuariActual = null;
             }
         }
         return usuariActual;

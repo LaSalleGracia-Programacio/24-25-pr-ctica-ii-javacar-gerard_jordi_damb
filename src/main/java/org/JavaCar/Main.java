@@ -14,7 +14,10 @@ public class Main {
 
             boolean continuar = true;
             while (continuar) {
-                if (usuariActual.isAdmin() == true) {
+                if (usuariActual == null) {
+                    seguir = false;
+                    continuar = false;
+                }else if (usuariActual.isAdmin() == true) {
                     System.out.println("\n\nHOLA ADMIN");
                 } else {
                     System.out.println("\n\nHOLA " + usuariActual.getUsername());
@@ -24,7 +27,7 @@ public class Main {
                             "[3]Tramitar un lloguer\n" +
                             "[4]Veure vehicles en propietat\n" +
                             "[5]Cancelar alquiler\n" +
-                            "[6]Sortir");
+                            "[6]Logout");
                     int opcio = sc.nextInt();
                     switch (opcio) {
                         case 1:
