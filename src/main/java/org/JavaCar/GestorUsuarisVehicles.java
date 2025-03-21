@@ -31,7 +31,7 @@ public class GestorUsuarisVehicles {
 
     public void calculVehicleDies(int id, int dies){
         if (vehiclesDisponibles.get(id-1) != null) {
-            System.out.println(vehiclesDisponibles.get(id - 1).calcularPreu(dies));
+            System.out.println(vehiclesDisponibles.get(id - 1).calcularPreu(dies) + "€");
         }else {
             System.out.println("No existeix aquesta id");
         }
