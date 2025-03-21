@@ -9,12 +9,48 @@ import org.JavaCar.vehicles.*;
 
 public class GestorUsuarisVehicles {
     private ArrayList<Usuari> usuaris;
-    private ArrayList<Vehicle> vehicles;
+    private ArrayList<Vehicle> vehiclesDisponibles;
+    private ArrayList<Vehicle> vehiclesOcupats;
 
     public GestorUsuarisVehicles() {
         usuaris = new ArrayList();
-        vehicles = new ArrayList();
+        vehiclesDisponibles = new ArrayList();
+        vehiclesOcupats = new ArrayList();
         inicialitzacioArrays();
+    }
+
+    public void cancelarLloguer(Usuari usuariActual){
+        if (usuariActual.mostrarVehiclesEnPropietat()){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Introdueix el id del lloguer que vols cancelar:");
+            int id = sc.nextInt();
+            usuariActual.eliminarVehicle(id-1);
+            System.out.println("el vehicle s'ha eliminat correctamente");
+        }
+    }
+
+    public void calculVehicleDies(int id, int dies){
+        if (vehiclesDisponibles.get(id-1) != null) {
+            System.out.println(vehiclesDisponibles.get(id - 1).calcularPreu(dies));
+        }else {
+            System.out.println("No existeix aquesta id");
+        }
+    }
+
+    public void tramitarLloguer(int id, int dies, Usuari usuariActual){
+        if (vehiclesDisponibles.get(id-1) != null) {
+            Vehicle tramitant = vehiclesDisponibles.get(id - 1);
+            System.out.println("Estas a punt de alquilar el/la " + tramitant.getMarca() +
+                    " " + tramitant.getModel() + " per " + tramitant.calcularPreu(dies) + "€ durant " + dies + " dies");
+            System.out.println("estas segur?[Y/N]");
+            Scanner sc = new Scanner(System.in);
+            String s = sc.nextLine();
+            if (s.equalsIgnoreCase("y")) {
+                vehiclesDisponibles.remove(tramitant);
+                vehiclesOcupats.add(tramitant);
+                usuariActual.afegirVehicle(tramitant);
+            }
+        }
     }
 
     public Usuari iniciarSesio() {
@@ -58,19 +94,21 @@ public class GestorUsuarisVehicles {
     }
 
     public  void printarVehicles() {
-        System.out.printf("%-15s %-15s %s%n", "MARCA", "MODEL", "PREU/DIA");
-        for (Vehicle vehicle : vehicles) {
-            System.out.printf("%-15s %-15s %.2f €%n",
-                    vehicle.getMarca(), vehicle.getModel(), vehicle.getPreuBase());
+        System.out.printf("%-3s %-15s %-15s %s%n","ID", "MARCA", "MODEL", "PREU/DIA");
+        int contador = 1;
+        for (Vehicle vehicle : vehiclesDisponibles) {
+            System.out.printf("[%-1s] %-15s %-15s %.2f €%n",
+                    contador, vehicle.getMarca(), vehicle.getModel(), vehicle.getPreuBase());
+            contador++;
         }
     }
 
     private void inicialitzacioArrays() {
-        vehicles.add(new Moto("5678DEF", "Yamaha", "R3", 25.00, 300, null, null));
-        vehicles.add(new Moto("9101GHI", "Honda", "CBR600RR", 45.00, 600, null, null));
-        vehicles.add(new Moto("1121JKL", "Zero", "SR/F", 60.00, 250, null, null));
-        vehicles.add(new Moto("3141MNO", "Ducati", "Panigale V4", 120.00, 1000, null, null));
-        vehicles.add(new Moto("4151PQR", "Kawasaki", "Ninja H2", 150.00, 500, null, null));
+        vehiclesDisponibles.add(new Moto("5678DEF", "Yamaha", "R3", 25.00, 300, null, null));
+        vehiclesDisponibles.add(new Moto("9101GHI", "Honda", "CBR600RR", 45.00, 600, null, null));
+        vehiclesDisponibles.add(new Moto("1121JKL", "Zero", "SR/F", 60.00, 250, null, null));
+        vehiclesDisponibles.add(new Moto("3141MNO", "Ducati", "Panigale V4", 120.00, 1000, null, null));
+        vehiclesDisponibles.add(new Moto("4151PQR", "Kawasaki", "Ninja H2", 150.00, 500, null, null));
 
 
         usuaris.add(new Admin("admin", "admin"));
@@ -81,15 +119,15 @@ public class GestorUsuarisVehicles {
         usuaris.add(usuari);
     }
 
-    private void afegirVehicle(Vehicle vehicle) {
-        vehicles.add(vehicle);
+    private void afegirVehicleDisponible(Vehicle vehicle) {
+        vehiclesDisponibles.add(vehicle);
     }
 
     public ArrayList<Usuari> getUsuaris() {
         return usuaris;
     }
 
-    public ArrayList<Vehicle> getVehicles() {
-        return vehicles;
+    public ArrayList<Vehicle> getVehiclesDisponibles() {
+        return vehiclesDisponibles;
     }
 }
