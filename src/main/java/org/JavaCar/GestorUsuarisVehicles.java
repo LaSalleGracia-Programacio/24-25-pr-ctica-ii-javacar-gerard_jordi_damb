@@ -29,8 +29,13 @@ public class GestorUsuarisVehicles {
         }
     }
 
-    public void calculVehicleDies(int id, int dies){
-        if (vehiclesDisponibles.get(id-1) != null) {
+    public void calculVehicleDies(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("id del vehicle que vols calcular:");
+        int id = sc.nextInt();
+        if (id <= usuaris.size() + 1 && id > 0) {
+            System.out.println("Quants de dies el voldries disposar?");
+            int dies = sc.nextInt();
             System.out.println(vehiclesDisponibles.get(id - 1).calcularPreu(dies) + "€");
         }else {
             System.out.println("No existeix aquesta id");
@@ -118,6 +123,7 @@ public class GestorUsuarisVehicles {
 
         usuaris.add(new Admin("admin", "admin"));
         usuaris.add(new Client("a", "a"));
+        usuaris.add(new Client("user", "user"));
     }
 
     private void afegirUsuari(Usuari usuari) {

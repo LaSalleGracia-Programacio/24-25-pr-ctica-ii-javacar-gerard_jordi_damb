@@ -35,18 +35,14 @@ public class Main {
                             enterPerContinuar();
                             break;
                         case 2:
-                            System.out.println("id del vehicle que vols calcular:");
-                            int id = sc.nextInt();
-                            System.out.println("quants de dies el voldries disposar?");
-                            int dies = sc.nextInt();
-                            guv.calculVehicleDies(id, dies);
+                            guv.calculVehicleDies();
                             enterPerContinuar();
                             break;
                         case 3:
                             System.out.println("id del vehicle a llogar:");
-                            id = sc.nextInt();
+                            int id = sc.nextInt();
                             System.out.println("Quants dies vols disposar del vehicle?");
-                            dies = sc.nextInt();
+                            int dies = sc.nextInt();
                             guv.tramitarLloguer(id, dies, usuariActual);
                             enterPerContinuar();
                             break;
