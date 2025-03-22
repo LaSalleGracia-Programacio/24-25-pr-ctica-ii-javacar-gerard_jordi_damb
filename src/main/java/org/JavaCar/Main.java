@@ -39,11 +39,7 @@ public class Main {
                             enterPerContinuar();
                             break;
                         case 3:
-                            System.out.println("id del vehicle a llogar:");
-                            int id = sc.nextInt();
-                            System.out.println("Quants dies vols disposar del vehicle?");
-                            int dies = sc.nextInt();
-                            guv.tramitarLloguer(id, dies, usuariActual);
+                            guv.tramitarLloguer(usuariActual);
                             enterPerContinuar();
                             break;
                         case 4:
