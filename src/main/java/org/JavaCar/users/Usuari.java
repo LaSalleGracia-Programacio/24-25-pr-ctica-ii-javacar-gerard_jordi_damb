@@ -1,13 +1,17 @@
 package org.JavaCar.users;
+import org.JavaCar.vehicles.Vehicle;
+import java.util.ArrayList;
 
 public abstract class Usuari {
     protected String username;
     protected String password;
     protected boolean admin;
+    private ArrayList<Vehicle> vehiclesEnPropietat;
 
     public Usuari(String username, String password) {
         this.username = username;
         this.password = password;
+        this.vehiclesEnPropietat = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -29,4 +33,35 @@ public abstract class Usuari {
     public boolean isAdmin() {
         return admin;
     }
+
+    public void eliminarVehicle(int index) {
+        vehiclesEnPropietat.remove(index);
+    }
+
+    public boolean mostrarVehiclesEnPropietat() {
+        if (vehiclesEnPropietat.isEmpty()) {
+            System.out.println("Encara no tens vehicles en propietat");
+            return false;
+        }else {
+            int contador = 1;
+            for (Vehicle vehicle : vehiclesEnPropietat) {
+                System.out.println("[" + contador + "] " + vehicle.getMarca() + " " + vehicle.getModel() + " " + vehicle.getMatricula());
+                contador++;
+            }
+            return true;
+        }
+    }
+
+    public void afegirVehicle(Vehicle vehicle){
+        this.vehiclesEnPropietat.add(vehicle);
+    }
+
+    public ArrayList<Vehicle> getVehiclesEnPropietat() {
+        return vehiclesEnPropietat;
+    }
+
+    public void setVehiclesEnPropietat(ArrayList<Vehicle> vehiclesEnPropietat) {
+        this.vehiclesEnPropietat = vehiclesEnPropietat;
+    }
+
 }
