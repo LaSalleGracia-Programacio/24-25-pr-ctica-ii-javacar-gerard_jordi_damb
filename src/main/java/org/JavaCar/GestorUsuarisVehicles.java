@@ -147,4 +147,33 @@ public class GestorUsuarisVehicles {
     public ArrayList<Vehicle> getVehiclesDisponibles() {
         return vehiclesDisponibles;
     }
+
+    public Vehicle nouVehicle() {
+        Scanner sc = new Scanner(System.in);
+        int op = 0;
+
+        System.out.println("Seleccionar tipus de vehicle");
+        System.out.println("[1] Cotxe");
+        System.out.println("[2] Furgoneta");
+        System.out.println("[3] Moto");
+        System.out.println("[4] Cancelar");
+
+        try {
+            op = sc.nextInt();
+        } catch (Exception e) { }
+
+        switch (op) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                System.out.println("Opcion invalida");
+                break;
+        }
+    }
 }
