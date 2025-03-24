@@ -19,6 +19,8 @@ public class Main {
                     continuar = false;
                 }else if (usuariActual.isAdmin() == true) {
                     System.out.println("\n\nHOLA ADMIN");
+                    seguir = false;
+                    continuar = false;
                 } else {
                     System.out.println("\n\nHOLA " + usuariActual.getUsername());
                     System.out.println("Que vols fer?\n" +
