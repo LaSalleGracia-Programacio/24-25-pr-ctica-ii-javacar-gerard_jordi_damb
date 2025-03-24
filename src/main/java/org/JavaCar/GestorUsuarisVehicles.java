@@ -30,6 +30,7 @@ public class GestorUsuarisVehicles {
     }
 
     public void calculVehicleDies(){
+        printarVehicles();
         Scanner sc = new Scanner(System.in);
         System.out.println("id del vehicle que vols calcular:");
         int id = sc.nextInt();
@@ -43,6 +44,7 @@ public class GestorUsuarisVehicles {
     }
 
     public void tramitarLloguer(Usuari usuariActual){
+        printarVehicles();
         Scanner sc = new Scanner(System.in);
         System.out.println("id del vehicle a llogar:");
         int id = sc.nextInt();
