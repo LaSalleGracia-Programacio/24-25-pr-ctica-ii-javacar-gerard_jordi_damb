@@ -17,7 +17,7 @@ public class Main {
                 if (usuariActual == null) {
                     seguir = false;
                     continuar = false;
-                }else if (usuariActual.isAdmin() == true) {
+                }else if (usuariActual.isAdmin()) {
                     System.out.println("\n\nHOLA ADMIN");
                     seguir = false;
                     continuar = false;
