@@ -132,7 +132,7 @@ public class GestorUsuarisVehicles {
         usuaris.add(new Client("user", "user"));
     }
 
-    private void afegirUsuari(Usuari usuari) {
+    public void afegirUsuari(Usuari usuari) {
         usuaris.add(usuari);
     }
 
