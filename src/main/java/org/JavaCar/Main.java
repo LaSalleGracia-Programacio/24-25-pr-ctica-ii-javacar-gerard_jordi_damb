@@ -1,6 +1,6 @@
 package org.JavaCar;
 import org.JavaCar.users.*;
-import org.JavaCar.vehicles.*;
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,7 +17,7 @@ public class Main {
                 if (usuariActual == null) {
                     seguir = false;
                     continuar = false;
-                }else if (usuariActual.isAdmin()) {
+                }else if (usuariActual.getAdmin()) {
                     System.out.println("\n\nHOLA ADMIN");
                     seguir = false;
                     continuar = false;
@@ -37,19 +37,11 @@ public class Main {
                             enterPerContinuar();
                             break;
                         case 2:
-                            System.out.println("id del vehicle que vols calcular:");
-                            int id = sc.nextInt();
-                            System.out.println("quants de dies el voldries disposar?");
-                            int dies = sc.nextInt();
-                            guv.calculVehicleDies(id, dies);
+                            guv.calculVehicleDies();
                             enterPerContinuar();
                             break;
                         case 3:
-                            System.out.println("id del vehicle a llogar:");
-                            id = sc.nextInt();
-                            System.out.println("Quants dies vols disposar del vehicle?");
-                            dies = sc.nextInt();
-                            guv.tramitarLloguer(id, dies, usuariActual);
+                            guv.tramitarLloguer(usuariActual);
                             enterPerContinuar();
                             break;
                         case 4:

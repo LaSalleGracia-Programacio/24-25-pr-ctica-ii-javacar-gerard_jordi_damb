@@ -30,12 +30,16 @@ public abstract class Usuari {
         this.password = password;
     }
 
-    public boolean isAdmin() {
+    public boolean getAdmin() {
         return admin;
     }
 
-    public void eliminarVehicle(int index) {
-        vehiclesEnPropietat.remove(index);
+    public ArrayList<Vehicle> getVehiclesEnPropietat() {
+        return vehiclesEnPropietat;
+    }
+
+    public void setVehiclesEnPropietat(ArrayList<Vehicle> vehiclesEnPropietat) {
+        this.vehiclesEnPropietat = vehiclesEnPropietat;
     }
 
     public boolean mostrarVehiclesEnPropietat() {
@@ -56,12 +60,7 @@ public abstract class Usuari {
         this.vehiclesEnPropietat.add(vehicle);
     }
 
-    public ArrayList<Vehicle> getVehiclesEnPropietat() {
-        return vehiclesEnPropietat;
+    public void eliminarVehicle(int index) {
+        vehiclesEnPropietat.remove(index);
     }
-
-    public void setVehiclesEnPropietat(ArrayList<Vehicle> vehiclesEnPropietat) {
-        this.vehiclesEnPropietat = vehiclesEnPropietat;
-    }
-
 }

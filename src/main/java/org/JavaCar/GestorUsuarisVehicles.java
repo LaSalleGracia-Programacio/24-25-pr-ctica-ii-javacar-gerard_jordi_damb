@@ -29,29 +29,40 @@ public class GestorUsuarisVehicles {
         }
     }
 
-    public void calculVehicleDies(int id, int dies){
-        if (vehiclesDisponibles.get(id-1) != null) {
+    public void calculVehicleDies(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("id del vehicle que vols calcular:");
+        int id = sc.nextInt();
+        if (id <= vehiclesDisponibles.size() && id > 0) {
+            System.out.println("Quants de dies el voldries disposar?");
+            int dies = sc.nextInt();
             System.out.println(vehiclesDisponibles.get(id - 1).calcularPreu(dies) + "€");
         }else {
             System.out.println("No existeix aquesta id");
         }
     }
 
-    public void tramitarLloguer(int id, int dies, Usuari usuariActual){
-        if (vehiclesDisponibles.get(id-1) != null) {
+    public void tramitarLloguer(Usuari usuariActual){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("id del vehicle a llogar:");
+        int id = sc.nextInt();
+        if (id <= vehiclesDisponibles.size() && id > 0) {
+            System.out.println("Quants dies vols disposar del vehicle?");
+            int dies = sc.nextInt();
+            sc.nextLine();
             Vehicle tramitant = vehiclesDisponibles.get(id - 1);
             System.out.println("Estas a punt de alquilar el/la " + tramitant.getMarca() +
                     " " + tramitant.getModel() + " per " + tramitant.calcularPreu(dies) + "€ durant " + dies + " dies");
             System.out.println("estas segur?[Y/N]");
-            Scanner sc = new Scanner(System.in);
             String s = sc.nextLine();
             if (s.equalsIgnoreCase("y")) {
                 vehiclesDisponibles.remove(tramitant);
                 vehiclesOcupats.add(tramitant);
                 usuariActual.afegirVehicle(tramitant);
             }
-        }
-    }
+        }else {
+            System.out.println("No existeix aquesta id");
+        }    }
 
     public Usuari iniciarSesio() {
         Scanner sc = new Scanner(System.in);
@@ -118,6 +129,7 @@ public class GestorUsuarisVehicles {
 
         usuaris.add(new Admin("admin", "admin"));
         usuaris.add(new Client("a", "a"));
+        usuaris.add(new Client("user", "user"));
     }
 
     private void afegirUsuari(Usuari usuari) {
