@@ -19,8 +19,39 @@ public class Main {
                     continuar = false;
                 }else if (usuariActual.getAdmin()) {
                     System.out.println("\n\nHOLA ADMIN");
-                    seguir = false;
-                    continuar = false;
+                    System.out.println("Que vols fer?\n" +
+                            "[1]Veure llistat de vehicles\n" +
+                            "[2]Calcul de lloguer\n" +
+                            "[3]Afegir vehicle\n" +
+                            "[4]Editar vehicle\n" +
+                            "[5]Eliminar vehicle\n" +
+                            "[6]Logout");
+                    int opcio = sc.nextInt();
+                    switch (opcio) {
+                        case 1:
+                            guv.printarVehicles();
+                            enterPerContinuar();
+                            break;
+                        case 2:
+                            guv.calculVehicleDies();
+                            enterPerContinuar();
+                            break;
+                        case 3:
+                            // FUNCION PARA AÑADIR VEHICULO (CREAR MENU DE CREACION DE VEHICULOS)
+                            enterPerContinuar();
+                            break;
+                        case 4:
+                            // FUNCION PARA EDITAR VEHICULO (CREAR MENU DE EDICION)
+                            enterPerContinuar();
+                            break;
+                        case 5:
+                            // FUNCION ELIMINAR VEHICULO (CREAR MENU PARA ELEGIR VEHICULO)
+                            enterPerContinuar();
+                            break;
+                        case 6:
+                            continuar = false;
+                            break;
+                    }
                 } else {
                     System.out.println("\n\nHOLA " + usuariActual.getUsername());
                     System.out.println("Que vols fer?\n" +

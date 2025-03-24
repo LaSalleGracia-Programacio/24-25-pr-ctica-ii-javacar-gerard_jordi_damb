@@ -136,7 +136,7 @@ public class GestorUsuarisVehicles {
         usuaris.add(usuari);
     }
 
-    private void afegirVehicleDisponible(Vehicle vehicle) {
+    public void afegirVehicleDisponible(Vehicle vehicle) {
         vehiclesDisponibles.add(vehicle);
     }
 
