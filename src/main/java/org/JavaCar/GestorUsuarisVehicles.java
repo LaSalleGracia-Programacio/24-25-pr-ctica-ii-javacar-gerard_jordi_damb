@@ -126,7 +126,6 @@ public class GestorUsuarisVehicles {
         vehiclesDisponibles.add(new Moto("3141MNO", "Ducati", "Panigale V4", 120.00, 1000, null, null));
         vehiclesDisponibles.add(new Moto("4151PQR", "Kawasaki", "Ninja H2", 150.00, 500, null, null));
 
-
         usuaris.add(new Admin("admin", "admin"));
         usuaris.add(new Client("a", "a"));
         usuaris.add(new Client("user", "user"));
@@ -148,8 +147,14 @@ public class GestorUsuarisVehicles {
         return vehiclesDisponibles;
     }
 
-    public Vehicle nouVehicle() {
+    public Vehicle nouVehicle() { // FUNCION PARA AÑADIR VEHICULO (CREAR MENU DE CREACION DE VEHICULOS)
         Scanner sc = new Scanner(System.in);
+        Vehicle nouVehicle = null;
+
+        String matricula = null, marca = null, modelo = null;
+        double preuBase = 0, capacitatCarga = 0;
+        int nombrePlaces = 0, cilindrada = 0;
+
         int op = 0;
 
         System.out.println("Seleccionar tipus de vehicle");
@@ -157,23 +162,73 @@ public class GestorUsuarisVehicles {
         System.out.println("[2] Furgoneta");
         System.out.println("[3] Moto");
         System.out.println("[4] Cancelar");
+        op = sc.nextInt();
 
-        try {
-            op = sc.nextInt();
-        } catch (Exception e) { }
+        if (op >= 1 && op <= 3) { // DEMANAR VALORS DE VEHICLES
+            do {
+                System.out.print("Inserti matricula: ");
+                try {
+                    matricula = sc.next();
+                } catch (Exception e) {
+                    System.err.println("ERROR: " + e.getMessage());
+                }
+            } while (matricula == null);
+            do {
+                System.out.print("Inserti marca: ");
+                try {
+                    marca = sc.next();
+                } catch (Exception e) {
+                    System.err.println("ERROR: " + e.getMessage());
+                }
+            } while (marca == null);
+            do {
+                System.out.print("Inserti modelo: ");
+                try {
+                    modelo = sc.next();
+                } catch (Exception e) {
+                    System.err.println("ERROR: " + e.getMessage());
+                }
+            } while (modelo == null);
+            do {
+                System.out.print("Inserti preu base: ");
+                try {
+                    preuBase = sc.nextFloat();
+                } catch (Exception e) {
+                    System.err.println("ERROR: " + e.getMessage());
+                }
+            } while (preuBase == 0);
+            do {
+                System.out.print("Inserti nombre places: ");
+                try {
+                    nombrePlaces = sc.nextInt();
+                } catch (Exception e) {
+                    System.err.println("ERROR: " + e.getMessage());
+                }
+            } while (nombrePlaces == 0);
+        }
 
         switch (op) {
             case 1:
+                // CREAR Y AFEGIR COTXE A LLISTA DE VEHICLES DISPONIBLES
+                Cotxe nouCotxe = new Cotxe(matricula, marca, modelo, preuBase, nombrePlaces, null, null);
+                afegirVehicleDisponible(nouCotxe);
                 break;
             case 2:
+                // CREAR Y AFEGIR MOTO A LLISTA DE VEHICLES DISPONIBLES
+                Moto novaMoto = new Moto(matricula, marca, modelo, preuBase, nombrePlaces, null, null);
+                afegirVehicleDisponible(novaMoto);
                 break;
             case 3:
+                // CREAR Y AFEGIR FURGONETA A LLISTA DE VEHICLES DISPONIBLES
+                Furgoneta novaFurgoneta = new Furgoneta(matricula, marca, modelo, preuBase, nombrePlaces, null, null);
+                afegirVehicleDisponible(novaFurgoneta);
                 break;
             case 4:
                 break;
             default:
-                System.out.println("Opcion invalida");
+                System.out.println("Opció invàlida");
                 break;
         }
+        return nouVehicle;
     }
 }
