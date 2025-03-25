@@ -37,7 +37,7 @@ public class Main {
                             enterPerContinuar();
                             break;
                         case 3:
-                            // FUNCION PARA AÑADIR VEHICULO (CREAR MENU DE CREACION DE VEHICULOS)
+                            guv.nouVehicle();
                             enterPerContinuar();
                             break;
                         case 4:
