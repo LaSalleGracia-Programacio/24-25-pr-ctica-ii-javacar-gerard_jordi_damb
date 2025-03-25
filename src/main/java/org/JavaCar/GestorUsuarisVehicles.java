@@ -149,7 +149,7 @@ public class GestorUsuarisVehicles {
         return vehiclesDisponibles;
     }
 
-    public Vehicle nouVehicle() { // FUNCION PARA AÑADIR VEHICULO (CREAR MENU DE CREACION DE VEHICULOS)
+    public void nouVehicle() { // FUNCION PARA AÑADIR VEHICULO (CREAR MENU DE CREACION DE VEHICULOS)
         Scanner sc = new Scanner(System.in);
         Vehicle nouVehicle = null;
 
@@ -231,6 +231,9 @@ public class GestorUsuarisVehicles {
                 System.out.println("Opció invàlida");
                 break;
         }
-        return nouVehicle;
+    }
+
+    public void editarVehicle() {
+
     }
 }

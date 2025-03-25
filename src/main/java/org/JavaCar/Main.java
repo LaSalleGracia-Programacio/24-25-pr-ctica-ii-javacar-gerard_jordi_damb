@@ -41,7 +41,7 @@ public class Main {
                             enterPerContinuar();
                             break;
                         case 4:
-                            // FUNCION PARA EDITAR VEHICULO (CREAR MENU DE EDICION)
+                            guv.editarVehicle();
                             enterPerContinuar();
                             break;
                         case 5:
