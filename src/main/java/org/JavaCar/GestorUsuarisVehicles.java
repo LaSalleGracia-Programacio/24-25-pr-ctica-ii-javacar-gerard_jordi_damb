@@ -112,12 +112,21 @@ public class GestorUsuarisVehicles {
         return usuariActual;
     }
 
-    public  void printarVehicles() {
-        System.out.printf("%-3s %-15s %-15s %s%n","ID", "MARCA", "MODEL", "PREU/DIA");
+    public void printarVehicles() {
+        System.out.printf("%-3s %-15s %-15s %-10s %s%n", "ID", "MARCA", "MODEL", "PREU/DIA", "TIPUS");
         int contador = 1;
         for (Vehicle vehicle : vehiclesDisponibles) {
-            System.out.printf("[%-1s] %-15s %-15s %.2f €%n",
-                    contador, vehicle.getMarca(), vehicle.getModel(), vehicle.getPreuBase());
+            String tipo;
+            if (vehicle instanceof Cotxe) {
+                tipo = "Cotxe";
+            } else if (vehicle instanceof Moto) {
+                tipo = "Moto";
+            } else {
+                tipo = "Furgoneta";
+            }
+
+            System.out.printf("[%-1d] %-15s %-15s %-7.2f€   %s%n",
+                    contador, vehicle.getMarca(), vehicle.getModel(), vehicle.getPreuBase(), tipo);
             contador++;
         }
     }
