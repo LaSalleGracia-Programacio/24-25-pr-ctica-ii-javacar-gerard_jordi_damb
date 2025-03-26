@@ -87,8 +87,6 @@ public class GestorUsuarisVehicles {
             try {
                 opcio = sc.nextInt();
             } catch (Exception e) {
-                System.err.println("Opcio invalida");
-                sleep(100);
                 sc.next();
             }
 
@@ -131,7 +129,9 @@ public class GestorUsuarisVehicles {
                     iniciat = true;
                     usuariActual = null;
                 default:
-
+                    System.err.println("Opcio invalida");
+                    sleep(100);
+                    break;
             }
         }
         return usuariActual;

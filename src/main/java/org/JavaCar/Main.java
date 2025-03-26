@@ -3,6 +3,8 @@ import org.JavaCar.users.*;
 
 import java.util.Scanner;
 
+import static java.lang.Thread.sleep;
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         GestorUsuarisVehicles guv = new GestorUsuarisVehicles();
@@ -30,7 +32,7 @@ public class Main {
                     try {
                         opcio = sc.nextInt();
                     } catch (Exception e) {
-                        System.out.println("Opcio invalido");
+                        sc.next();
                     }
                     switch (opcio) {
                         case 1:
@@ -56,6 +58,10 @@ public class Main {
                         case 6:
                             continuar = false;
                             break;
+                        default:
+                            System.err.println("Opcio invalida");
+                            sleep(100);
+                            break;
                     }
                 } else {
                     System.out.println("\n\nHOLA " + usuariActual.getUsername());
@@ -66,7 +72,11 @@ public class Main {
                             "[4]Veure vehicles en propietat\n" +
                             "[5]Cancelar alquiler\n" +
                             "[6]Logout");
-                    opcio = sc.nextInt();
+                    try {
+                        opcio = sc.nextInt();
+                    } catch (Exception e) {
+                        sc.next();
+                    }
                     switch (opcio) {
                         case 1:
                             guv.printarVehicles();
@@ -90,6 +100,10 @@ public class Main {
                             break;
                         case 6:
                             continuar = false;
+                            break;
+                        default:
+                            System.err.println("Opcio invalida");
+                            sleep(100);
                             break;
                     }
                 }
