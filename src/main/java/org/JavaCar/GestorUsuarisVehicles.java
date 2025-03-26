@@ -133,11 +133,11 @@ public class GestorUsuarisVehicles {
         usuaris.add(new Client("user", "user"));
     }
 
-    public void afegirUsuari(Usuari usuari) {
+    public void setUsuari(Usuari usuari) {
         usuaris.add(usuari);
     }
 
-    public void afegirVehicleDisponible(Vehicle vehicle) {
+    public void setVehicleDisponible(Vehicle vehicle) {
         vehiclesDisponibles.add(vehicle);
     }
 
@@ -213,17 +213,17 @@ public class GestorUsuarisVehicles {
             case 1:
                 // CREAR Y AFEGIR COTXE A LLISTA DE VEHICLES DISPONIBLES
                 Cotxe nouCotxe = new Cotxe(matricula, marca, modelo, preuBase, nombrePlaces, null, null);
-                afegirVehicleDisponible(nouCotxe);
+                setVehicleDisponible(nouCotxe);
                 break;
             case 2:
                 // CREAR Y AFEGIR MOTO A LLISTA DE VEHICLES DISPONIBLES
                 Moto novaMoto = new Moto(matricula, marca, modelo, preuBase, nombrePlaces, null, null);
-                afegirVehicleDisponible(novaMoto);
+                setVehicleDisponible(novaMoto);
                 break;
             case 3:
                 // CREAR Y AFEGIR FURGONETA A LLISTA DE VEHICLES DISPONIBLES
                 Furgoneta novaFurgoneta = new Furgoneta(matricula, marca, modelo, preuBase, nombrePlaces, null, null);
-                afegirVehicleDisponible(novaFurgoneta);
+                setVehicleDisponible(novaFurgoneta);
                 break;
             case 4:
                 break;
