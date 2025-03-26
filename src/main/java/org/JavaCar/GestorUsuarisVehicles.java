@@ -64,7 +64,8 @@ public class GestorUsuarisVehicles {
             }
         }else {
             System.out.println("No existeix aquesta id");
-        }    }
+        }
+    }
 
     public Usuari iniciarSesio() {
         Scanner sc = new Scanner(System.in);
@@ -234,6 +235,29 @@ public class GestorUsuarisVehicles {
     }
 
     public void editarVehicle() {
-
+        printarVehicles();
+        System.out.println("ID del vehicle a editar");
+        Scanner sc = new Scanner(System.in);
+        int id = sc.nextInt();
+        Vehicle editarem = vehiclesDisponibles.get(id - 1);
+        if (editarem.getClass() == Cotxe.class) {
+            System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
+                                "[2] Marca:            " + editarem.getMarca() + "\n" +
+                                "[3] Model:            " + editarem.getModel() + "\n" +
+                                "[4] Numero de places: " + ((Cotxe) editarem).getNombrePlaces() + "\n" +
+                                "[5] Preu Base:        " + editarem.getPreuBase());
+        }else if (editarem.getClass() == Moto.class) {
+            System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
+                                "[2] Marca:            " + editarem.getMarca() + "\n" +
+                                "[3] Model:            " + editarem.getModel() + "\n" +
+                                "[4] Cilindrada:       " + ((Moto) editarem).getCilindrada() + "\n" +
+                                "[5] Preu Base:        " + editarem.getPreuBase());
+        }else {
+            System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
+                                "[2] Marca:            " + editarem.getMarca() + "\n" +
+                                "[3] Model:            " + editarem.getModel() + "\n" +
+                                "[4] Capacitat carga:  " + ((Furgoneta) editarem).getCapacitatCarga() + "\n" +
+                                "[5] Preu Base:        " + editarem.getPreuBase());
+        }
     }
 }
