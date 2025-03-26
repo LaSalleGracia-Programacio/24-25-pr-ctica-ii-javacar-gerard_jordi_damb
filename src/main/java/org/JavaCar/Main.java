@@ -45,7 +45,7 @@ public class Main {
                             enterPerContinuar();
                             break;
                         case 5:
-                            // FUNCION ELIMINAR VEHICULO (CREAR MENU PARA ELEGIR VEHICULO)
+                            guv.eliminarVehicle();
                             enterPerContinuar();
                             break;
                         case 6:

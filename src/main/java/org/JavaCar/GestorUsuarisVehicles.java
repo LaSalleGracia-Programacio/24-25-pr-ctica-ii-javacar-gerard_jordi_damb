@@ -341,6 +341,20 @@ public class GestorUsuarisVehicles {
         }
     }
 
+    public void eliminarVehicle() {
+        printarVehicles();
+        System.out.println("Quin vehicle vols eliminar");
+        Scanner sc = new Scanner(System.in);
+        int id = sc.nextInt();
+        if (existeixID(id)) {
+            Vehicle eliminar = vehiclesDisponibles.get(id - 1);
+            System.out.println("Eliminant " + eliminar.getMarca() + " " + eliminar.getModel());
+            vehiclesDisponibles.remove(eliminar);
+        }else {
+            System.out.println("ID invalido");
+        }
+    }
+
     private void editarMatricula(Vehicle editarem) {
         Scanner sc = new Scanner(System.in);
         System.out.println("introdueix nova matricula:");

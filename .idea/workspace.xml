@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f39bd30c-ec2a-4a80-8055-085bff1eb31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorUsuarisVehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/GestorUsuarisVehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JavaCar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JavaCar/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +163,7 @@
       <workItem from="1742547909771" duration="71000" />
       <workItem from="1742554326150" duration="4774000" />
       <workItem from="1742915775216" duration="2734000" />
-      <workItem from="1743009362553" duration="3979000" />
+      <workItem from="1743009362553" duration="4307000" />
     </task>
     <servers />
   </component>
