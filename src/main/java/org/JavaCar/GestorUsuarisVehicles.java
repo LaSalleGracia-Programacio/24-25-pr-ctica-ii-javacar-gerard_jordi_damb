@@ -246,6 +246,30 @@ public class GestorUsuarisVehicles {
                                 "[3] Model:            " + editarem.getModel() + "\n" +
                                 "[4] Numero de places: " + ((Cotxe) editarem).getNombrePlaces() + "\n" +
                                 "[5] Preu Base:        " + editarem.getPreuBase());
+            System.out.println("QUE VOLS EDITAR?");
+            int option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    editarMatricula(editarem);
+                    break;
+                case 2:
+                    editarMarca(editarem);
+                    break;
+                case 3:
+                    editarModel(editarem);
+                    break;
+                case 4:
+                    System.out.println("introdueix nou numero de places:");
+                    int places = sc.nextInt();
+                    ((Cotxe) editarem).setNombrePlaces(places);
+                    System.out.println("Numero de places modificat correctament a '" + places + "'");
+                    break;
+                case 5:
+                    editarPreuBase(editarem);
+                    break;
+                default:
+                    System.out.println("Opcio invalida, sortint del mode edicio");
+            }
         }else if (editarem.getClass() == Moto.class) {
             System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
                                 "[2] Marca:            " + editarem.getMarca() + "\n" +
@@ -259,5 +283,37 @@ public class GestorUsuarisVehicles {
                                 "[4] Capacitat carga:  " + ((Furgoneta) editarem).getCapacitatCarga() + "\n" +
                                 "[5] Preu Base:        " + editarem.getPreuBase());
         }
+    }
+
+    private void editarMatricula(Vehicle editarem) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("introdueix nova matricula:");
+        String matricula = sc.next();
+        editarem.setMatricula(matricula);
+        System.out.println("Matricula modificada correctament a '" + matricula + "'");
+    }
+
+    private void editarMarca(Vehicle editarem) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("introdueix nova marca:");
+        String marca = sc.next();
+        editarem.setMarca(marca);
+        System.out.println("Marca modificada correctament a '" + marca + "'");
+    }
+
+    private void editarModel(Vehicle editarem) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("introdueix nou model:");
+        String model = sc.next();
+        editarem.setModel(model);
+        System.out.println("Model modificat correctament a '" + model + "'");
+    }
+
+    private void editarPreuBase(Vehicle editarem) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("introdueix nou preu base:");
+        double preuBase = sc.nextFloat();
+        editarem.setPreuBase(preuBase);
+        System.out.println("Preu base modificat correctament a '" + preuBase + "'");
     }
 }

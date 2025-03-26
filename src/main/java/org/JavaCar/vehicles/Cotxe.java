@@ -74,4 +74,8 @@ public class Cotxe extends Vehicle {
             }
         }
     }
+
+    public void setNombrePlaces(int nombrePlaces) {
+        this.nombrePlaces = nombrePlaces;
+    }
 }
