@@ -43,7 +43,7 @@
     "JUnit.FurgonetaTest.testCreacioFurgoneta.executor": "Run",
     "JUnit.LlogableGestorTest.testCalcularIngressosTotals.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Jordi",
+    "git-widget-placeholder": "Gerard",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/propietari/Documents/GitHub/24-25-pr-ctica-ii-javacar-gerard_jordi_damb",
     "node.js.detected.package.eslint": "true",
@@ -163,6 +163,7 @@
       <workItem from="1742547909771" duration="71000" />
       <workItem from="1742554326150" duration="4774000" />
       <workItem from="1742915775216" duration="2734000" />
+      <workItem from="1743009362553" duration="5889000" />
     </task>
     <servers />
   </component>

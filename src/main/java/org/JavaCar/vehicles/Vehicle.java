@@ -90,6 +90,22 @@ public abstract class Vehicle implements Llogable {
         return etiquetaAmbiental;
     }
 
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setPreuBase(double preuBase) {
+        this.preuBase = preuBase;
+    }
+
     @Override
     public double calcularPreu(int dies) {
         return preuBase * dies;
