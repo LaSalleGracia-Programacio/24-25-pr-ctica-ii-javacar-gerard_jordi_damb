@@ -308,6 +308,32 @@ public class GestorUsuarisVehicles {
                                 "[3] Model:            " + editarem.getModel() + "\n" +
                                 "[4] Capacitat carga:  " + ((Furgoneta) editarem).getCapacitatCarga() + "\n" +
                                 "[5] Preu Base:        " + editarem.getPreuBase());
+            System.out.println("QUE VOLS EDITAR?");
+            int option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    editarMatricula(editarem);
+                    break;
+                case 2:
+                    editarMarca(editarem);
+                    break;
+                case 3:
+                    editarModel(editarem);
+                    break;
+                case 4:
+                    System.out.println("introdueix la nova capacitat de carga:");
+                    double carga = sc.nextDouble();
+                    ((Furgoneta) editarem).setCapacitatCarga(carga);
+                    System.out.println("Cilindrada modificada correctament a '" + carga + "'");
+                    break;
+                case 5:
+                    editarPreuBase(editarem);
+                    break;
+                default:
+                    System.out.println("Opcio invalida, sortint del mode edicio");
+                    break;
+            }
+
         }
     }
 
