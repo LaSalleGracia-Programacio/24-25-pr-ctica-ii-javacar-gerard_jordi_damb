@@ -4,7 +4,7 @@ import org.JavaCar.users.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         GestorUsuarisVehicles guv = new GestorUsuarisVehicles();
         Scanner sc = new Scanner(System.in);
 
@@ -14,6 +14,7 @@ public class Main {
 
             boolean continuar = true;
             while (continuar) {
+                int opcio = 0;
                 if (usuariActual == null) {
                     seguir = false;
                     continuar = false;
@@ -26,7 +27,11 @@ public class Main {
                             "[4]Editar vehicle\n" +
                             "[5]Eliminar vehicle\n" +
                             "[6]Logout");
-                    int opcio = sc.nextInt();
+                    try {
+                        opcio = sc.nextInt();
+                    } catch (Exception e) {
+                        System.out.println("Opcio invalido");
+                    }
                     switch (opcio) {
                         case 1:
                             guv.printarVehicles();
@@ -61,7 +66,7 @@ public class Main {
                             "[4]Veure vehicles en propietat\n" +
                             "[5]Cancelar alquiler\n" +
                             "[6]Logout");
-                    int opcio = sc.nextInt();
+                    opcio = sc.nextInt();
                     switch (opcio) {
                         case 1:
                             guv.printarVehicles();

@@ -7,6 +7,8 @@ import java.util.Scanner;
 import org.JavaCar.users.*;
 import org.JavaCar.vehicles.*;
 
+import static java.lang.Thread.sleep;
+
 public class GestorUsuarisVehicles {
     private ArrayList<Usuari> usuaris;
     private ArrayList<Vehicle> vehiclesDisponibles;
@@ -67,17 +69,28 @@ public class GestorUsuarisVehicles {
         }
     }
 
-    public Usuari iniciarSesio() {
+    public Usuari iniciarSesio() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         boolean iniciat = false;
         Usuari usuariActual = null;
 
         while (!iniciat) {
-            System.out.println("BENVINGUT A JAVACAR\n" +
-                    "[1]Iniciar sesió\n" +
-                    "[2]Registrar-se\n" +
-                    "[3]Sortir");
-            int opcio = sc.nextInt();
+            int opcio = 0;
+            System.out.print(
+                    "+---------------------+\n" +
+                    "| BENVINGUT A JAVACAR |\n" +
+                    "| [1] Iniciar sesió   |\n" +
+                    "| [2] Registrar-se    |\n" +
+                    "| [3] Sortir          |\n" +
+                    "+---------------------+\n" +
+                    ">");
+            try {
+                opcio = sc.nextInt();
+            } catch (Exception e) {
+                System.err.println("Opcio invalida");
+                sleep(100);
+                sc.next();
+            }
 
             switch (opcio) {
                 case 1:
@@ -117,6 +130,8 @@ public class GestorUsuarisVehicles {
                 case 3:
                     iniciat = true;
                     usuariActual = null;
+                default:
+
             }
         }
         return usuariActual;
