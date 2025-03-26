@@ -269,6 +269,7 @@ public class GestorUsuarisVehicles {
                     break;
                 default:
                     System.out.println("Opcio invalida, sortint del mode edicio");
+                    break;
             }
         }else if (editarem.getClass() == Moto.class) {
             System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
@@ -276,6 +277,31 @@ public class GestorUsuarisVehicles {
                                 "[3] Model:            " + editarem.getModel() + "\n" +
                                 "[4] Cilindrada:       " + ((Moto) editarem).getCilindrada() + "\n" +
                                 "[5] Preu Base:        " + editarem.getPreuBase());
+            System.out.println("QUE VOLS EDITAR?");
+            int option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    editarMatricula(editarem);
+                    break;
+                case 2:
+                    editarMarca(editarem);
+                    break;
+                case 3:
+                    editarModel(editarem);
+                    break;
+                case 4:
+                    System.out.println("introdueix la nova cilindrada:");
+                    int cilindrada = sc.nextInt();
+                    ((Moto) editarem).setCilindrada(cilindrada);
+                    System.out.println("Cilindrada modificada correctament a '" + cilindrada + "'");
+                    break;
+                case 5:
+                    editarPreuBase(editarem);
+                    break;
+                default:
+                    System.out.println("Opcio invalida, sortint del mode edicio");
+                    break;
+            }
         }else {
             System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
                                 "[2] Marca:            " + editarem.getMarca() + "\n" +
