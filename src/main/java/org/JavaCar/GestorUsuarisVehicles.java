@@ -34,7 +34,7 @@ public class GestorUsuarisVehicles {
         Scanner sc = new Scanner(System.in);
         System.out.println("id del vehicle que vols calcular:");
         int id = sc.nextInt();
-        if (id <= vehiclesDisponibles.size() && id > 0) {
+        if (existeixID(id)) {
             System.out.println("Quants de dies el voldries disposar?");
             int dies = sc.nextInt();
             System.out.println(vehiclesDisponibles.get(id - 1).calcularPreu(dies) + "€");
@@ -48,7 +48,7 @@ public class GestorUsuarisVehicles {
         Scanner sc = new Scanner(System.in);
         System.out.println("id del vehicle a llogar:");
         int id = sc.nextInt();
-        if (id <= vehiclesDisponibles.size() && id > 0) {
+        if (existeixID(id)) {
             System.out.println("Quants dies vols disposar del vehicle?");
             int dies = sc.nextInt();
             sc.nextLine();
@@ -239,101 +239,105 @@ public class GestorUsuarisVehicles {
         System.out.println("ID del vehicle a editar");
         Scanner sc = new Scanner(System.in);
         int id = sc.nextInt();
-        Vehicle editarem = vehiclesDisponibles.get(id - 1);
-        if (editarem.getClass() == Cotxe.class) {
-            System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
-                                "[2] Marca:            " + editarem.getMarca() + "\n" +
-                                "[3] Model:            " + editarem.getModel() + "\n" +
-                                "[4] Numero de places: " + ((Cotxe) editarem).getNombrePlaces() + "\n" +
-                                "[5] Preu Base:        " + editarem.getPreuBase());
-            System.out.println("QUE VOLS EDITAR?");
-            int option = sc.nextInt();
-            switch (option) {
-                case 1:
-                    editarMatricula(editarem);
-                    break;
-                case 2:
-                    editarMarca(editarem);
-                    break;
-                case 3:
-                    editarModel(editarem);
-                    break;
-                case 4:
-                    System.out.println("introdueix nou numero de places:");
-                    int places = sc.nextInt();
-                    ((Cotxe) editarem).setNombrePlaces(places);
-                    System.out.println("Numero de places modificat correctament a '" + places + "'");
-                    break;
-                case 5:
-                    editarPreuBase(editarem);
-                    break;
-                default:
-                    System.out.println("Opcio invalida, sortint del mode edicio");
-                    break;
-            }
-        }else if (editarem.getClass() == Moto.class) {
-            System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
-                                "[2] Marca:            " + editarem.getMarca() + "\n" +
-                                "[3] Model:            " + editarem.getModel() + "\n" +
-                                "[4] Cilindrada:       " + ((Moto) editarem).getCilindrada() + "\n" +
-                                "[5] Preu Base:        " + editarem.getPreuBase());
-            System.out.println("QUE VOLS EDITAR?");
-            int option = sc.nextInt();
-            switch (option) {
-                case 1:
-                    editarMatricula(editarem);
-                    break;
-                case 2:
-                    editarMarca(editarem);
-                    break;
-                case 3:
-                    editarModel(editarem);
-                    break;
-                case 4:
-                    System.out.println("introdueix la nova cilindrada:");
-                    int cilindrada = sc.nextInt();
-                    ((Moto) editarem).setCilindrada(cilindrada);
-                    System.out.println("Cilindrada modificada correctament a '" + cilindrada + "'");
-                    break;
-                case 5:
-                    editarPreuBase(editarem);
-                    break;
-                default:
-                    System.out.println("Opcio invalida, sortint del mode edicio");
-                    break;
+        if (existeixID(id)) {
+            Vehicle editarem = vehiclesDisponibles.get(id - 1);
+            if (editarem.getClass() == Cotxe.class) {
+                System.out.println("[1] Matricula:        " + editarem.getMatricula() + "\n" +
+                        "[2] Marca:            " + editarem.getMarca() + "\n" +
+                        "[3] Model:            " + editarem.getModel() + "\n" +
+                        "[4] Numero de places: " + ((Cotxe) editarem).getNombrePlaces() + "\n" +
+                        "[5] Preu Base:        " + editarem.getPreuBase());
+                System.out.println("QUE VOLS EDITAR?");
+                int option = sc.nextInt();
+                switch (option) {
+                    case 1:
+                        editarMatricula(editarem);
+                        break;
+                    case 2:
+                        editarMarca(editarem);
+                        break;
+                    case 3:
+                        editarModel(editarem);
+                        break;
+                    case 4:
+                        System.out.println("introdueix nou numero de places:");
+                        int places = sc.nextInt();
+                        ((Cotxe) editarem).setNombrePlaces(places);
+                        System.out.println("Numero de places modificat correctament a '" + places + "'");
+                        break;
+                    case 5:
+                        editarPreuBase(editarem);
+                        break;
+                    default:
+                        System.out.println("Opcio invalida, sortint del mode edicio");
+                        break;
+                }
+            } else if (editarem.getClass() == Moto.class) {
+                System.out.println("[1] Matricula:        " + editarem.getMatricula() + "\n" +
+                        "[2] Marca:            " + editarem.getMarca() + "\n" +
+                        "[3] Model:            " + editarem.getModel() + "\n" +
+                        "[4] Cilindrada:       " + ((Moto) editarem).getCilindrada() + "\n" +
+                        "[5] Preu Base:        " + editarem.getPreuBase());
+                System.out.println("QUE VOLS EDITAR?");
+                int option = sc.nextInt();
+                switch (option) {
+                    case 1:
+                        editarMatricula(editarem);
+                        break;
+                    case 2:
+                        editarMarca(editarem);
+                        break;
+                    case 3:
+                        editarModel(editarem);
+                        break;
+                    case 4:
+                        System.out.println("introdueix la nova cilindrada:");
+                        int cilindrada = sc.nextInt();
+                        ((Moto) editarem).setCilindrada(cilindrada);
+                        System.out.println("Cilindrada modificada correctament a '" + cilindrada + "'");
+                        break;
+                    case 5:
+                        editarPreuBase(editarem);
+                        break;
+                    default:
+                        System.out.println("Opcio invalida, sortint del mode edicio");
+                        break;
+                }
+            } else {
+                System.out.println("[1] Matricula:        " + editarem.getMatricula() + "\n" +
+                        "[2] Marca:            " + editarem.getMarca() + "\n" +
+                        "[3] Model:            " + editarem.getModel() + "\n" +
+                        "[4] Capacitat carga:  " + ((Furgoneta) editarem).getCapacitatCarga() + "\n" +
+                        "[5] Preu Base:        " + editarem.getPreuBase());
+                System.out.println("QUE VOLS EDITAR?");
+                int option = sc.nextInt();
+                switch (option) {
+                    case 1:
+                        editarMatricula(editarem);
+                        break;
+                    case 2:
+                        editarMarca(editarem);
+                        break;
+                    case 3:
+                        editarModel(editarem);
+                        break;
+                    case 4:
+                        System.out.println("introdueix la nova capacitat de carga:");
+                        double carga = sc.nextDouble();
+                        ((Furgoneta) editarem).setCapacitatCarga(carga);
+                        System.out.println("Cilindrada modificada correctament a '" + carga + "'");
+                        break;
+                    case 5:
+                        editarPreuBase(editarem);
+                        break;
+                    default:
+                        System.out.println("Opcio invalida, sortint del mode edicio");
+                        break;
+                }
+
             }
         }else {
-            System.out.println( "[1] Matricula:        " + editarem.getMatricula() + "\n" +
-                                "[2] Marca:            " + editarem.getMarca() + "\n" +
-                                "[3] Model:            " + editarem.getModel() + "\n" +
-                                "[4] Capacitat carga:  " + ((Furgoneta) editarem).getCapacitatCarga() + "\n" +
-                                "[5] Preu Base:        " + editarem.getPreuBase());
-            System.out.println("QUE VOLS EDITAR?");
-            int option = sc.nextInt();
-            switch (option) {
-                case 1:
-                    editarMatricula(editarem);
-                    break;
-                case 2:
-                    editarMarca(editarem);
-                    break;
-                case 3:
-                    editarModel(editarem);
-                    break;
-                case 4:
-                    System.out.println("introdueix la nova capacitat de carga:");
-                    double carga = sc.nextDouble();
-                    ((Furgoneta) editarem).setCapacitatCarga(carga);
-                    System.out.println("Cilindrada modificada correctament a '" + carga + "'");
-                    break;
-                case 5:
-                    editarPreuBase(editarem);
-                    break;
-                default:
-                    System.out.println("Opcio invalida, sortint del mode edicio");
-                    break;
-            }
-
+            System.out.println("No existeix aquesta id");
         }
     }
 
@@ -367,5 +371,13 @@ public class GestorUsuarisVehicles {
         double preuBase = sc.nextFloat();
         editarem.setPreuBase(preuBase);
         System.out.println("Preu base modificat correctament a '" + preuBase + "'");
+    }
+
+    private boolean existeixID(int id) {
+        if (id <= vehiclesDisponibles.size() && id > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
