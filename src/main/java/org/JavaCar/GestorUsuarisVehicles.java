@@ -96,13 +96,23 @@ public class GestorUsuarisVehicles {
                     }
                     break;
                 case 2:
+                    boolean repetit = false;
                     System.out.print("Nom: ");
                     String nom2 = sc.next();
-                    System.out.print("Contrasenya: ");
-                    String contrasenya2 = sc.next();
-                    usuaris.add(new Client(nom2, contrasenya2));
-                    iniciat = true;
-                    usuariActual = usuaris.get(usuaris.size() - 1);
+                    for (Usuari u: usuaris){
+                        if (Objects.equals(u.getUsername(), nom2)) {
+                            System.out.println("Aquest usuari ja existeix\n\n");
+                            repetit = true;
+                            break;
+                        }
+                    }
+                    if (!repetit) {
+                        System.out.print("Contrasenya: ");
+                        String contrasenya2 = sc.next();
+                        usuaris.add(new Client(nom2, contrasenya2));
+                        iniciat = true;
+                        usuariActual = usuaris.get(usuaris.size() - 1);
+                    }
                     break;
                 case 3:
                     iniciat = true;
