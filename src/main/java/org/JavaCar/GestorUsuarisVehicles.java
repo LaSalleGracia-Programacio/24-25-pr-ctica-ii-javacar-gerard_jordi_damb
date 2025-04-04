@@ -130,8 +130,8 @@ public class GestorUsuarisVehicles {
                     usuariActual = null;
                     break;
                 default:
-                    System.err.println("Opcio invalida");
                     sleep(100);
+                    System.err.println("Opcio invalida");
                     break;
             }
         }
