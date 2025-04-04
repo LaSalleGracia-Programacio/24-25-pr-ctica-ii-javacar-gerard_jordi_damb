@@ -128,6 +128,7 @@ public class GestorUsuarisVehicles {
                 case 3:
                     iniciat = true;
                     usuariActual = null;
+                    break;
                 default:
                     System.err.println("Opcio invalida");
                     sleep(100);
