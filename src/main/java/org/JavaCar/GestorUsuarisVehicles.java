@@ -26,6 +26,8 @@ public class GestorUsuarisVehicles {
             Scanner sc = new Scanner(System.in);
             System.out.println("Introdueix el id del lloguer que vols cancelar:");
             int id = sc.nextInt();
+            Vehicle vehicle = usuariActual.getVehiclesEnPropietat().get(id-1);
+            vehiclesDisponibles.add(vehicle);
             usuariActual.eliminarVehicle(id-1);
             System.out.println("el vehicle s'ha eliminat correctamente");
         }
